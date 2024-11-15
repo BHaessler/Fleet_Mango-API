@@ -8,7 +8,7 @@
   min-height: 100vh;
 }
 
-/* Header */
+/* Styling for the header */
 .App-header {
   background-color: #282c34;
   padding: 20px;
@@ -18,13 +18,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  }
+}
 
-/* Main content area */
+/* Styling the clickable header link */
+.header-link {
+  text-decoration: none;  /* Remove underline from the link */
+  color: white;           /* Set the text color to white */
+}
+
+.header-link:hover {
+  color: #61dafb;         /* Change color on hover */
+}
+
 main {
   padding-top: 80px;  /* Ensure space for the header */
   flex-grow: 1;       /* Make the main content take up remaining space */
 }
+
 
 /* Styling for list and list items */
 ul {
@@ -41,23 +51,3 @@ li {
   background-color: #f9f9f9;
 }
 
-/* App logo and animation */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
