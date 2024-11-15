@@ -1,0 +1,53 @@
+/* src/App.css */
+
+/* General App container */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Styling for the header */
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling the clickable header link */
+.header-link {
+  text-decoration: none;  /* Remove underline from the link */
+  color: white;           /* Set the text color to white */
+}
+
+.header-link:hover {
+  color: #61dafb;         /* Change color on hover */
+}
+
+main {
+  padding-top: 80px;  /* Ensure space for the header */
+  flex-grow: 1;       /* Make the main content take up remaining space */
+}
+
+
+/* Styling for list and list items */
+ul {
+  padding: 20px;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
