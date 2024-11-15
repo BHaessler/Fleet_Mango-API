@@ -1,0 +1,113 @@
+/*CarList.css */
+
+.car-list-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .car-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .car-item {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .car-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .car-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .car-link:focus {
+    outline: none;
+  }
+  
+
+@media (max-width: 768px) {
+  .car-list-container {
+    padding: 10px;
+  }
+
+  .car-link {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
+/*CarDetail.css */
+
+.car-detail-container {
+  margin: 20px;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.car-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.car-info, .owner-info {
+  width: 45%;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-info h3, .owner-info h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: bold;
+}
+ 
+
+@media (max-width: 768px) {
+  .car-detail {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .car-info, .owner-info {
+    width: 100%;
+  }
+}
