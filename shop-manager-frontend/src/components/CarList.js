@@ -1,36 +1,26 @@
-// src/CarList.js
+// src/components/CarList.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  // Fetch car data from the Django API
   useEffect(() => {
-    axios
-      .get('http://127.0.0.1:8000/api/cars/')
-      .then((response) => {
-        setCars(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('There was an error fetching the car data!', error);
-        setLoading(false);
-      });
+    fetch('http://127.0.0.1:8000/api/cars/')
+      .then(response => response.json())
+      .then(data => setCars(data))
+      .catch(error => console.log('Error fetching cars:', error));
   }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div>
-      <h1>Car List</h1>
+      <h2>Cars List</h2>
       <ul>
         {cars.map((car) => (
           <li key={car.id}>
-            {car.make} {car.model} ({car.year}) - {car.color} - {car.license_plate}
+            <button>
+              <Link to={`/car/${car.id}`}>{car.license_plate}</Link>
+            </button>
           </li>
         ))}
       </ul>
